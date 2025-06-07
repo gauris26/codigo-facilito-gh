@@ -1,0 +1,20 @@
+personas:
+  - nombre: Garu
+    edad: 32
+  - nombre: Javier
+    edad: 34
+mensaje: >
+  Hola,
+  Esto es un texto multilinea.
+
+defaults: &defaults
+  color: blue
+  size: medium
+
+item1:
+  <<: *defaults
+  color: red
+
+item2:
+  <<: *defaults
+  size: small
