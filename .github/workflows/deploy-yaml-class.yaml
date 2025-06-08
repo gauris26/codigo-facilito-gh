@@ -32,7 +32,7 @@ jobs:
 
     env:
       NAME: CodigoFacilito
-      SALIDA: ${{ needs.first_job.outputs.salidad }}
+      SALIDA: ${{ needs.first_job.outputs.salida }}
 
     steps:
       - name: Hola Mundo 2
