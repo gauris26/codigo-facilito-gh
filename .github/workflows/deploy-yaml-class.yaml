@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Hola Mundo 1
-        run: echo "Hola Mundo Primero"
+        run: cat hola.php
   
   second-job:
     needs: 
