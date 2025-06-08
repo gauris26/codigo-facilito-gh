@@ -7,6 +7,7 @@ on:
 
 jobs:
   first-job:
+    name: First Job
     runs-on: ubuntu-latest
 
     env:
@@ -24,4 +25,4 @@ jobs:
 
     steps:
       - name: Hola Mundo 2
-        run: echo "Hola Mundo Segundo ${{ github.ref }}" - $NAME
+        run: echo "Hola Mundo Segundo ${{ github.ref }}" - ${{ NAME }}
