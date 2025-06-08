@@ -24,7 +24,7 @@ jobs:
       - name: Action
         uses: actions/checkout@v4
 
-      - name:
+      - name: Generar archivo
         run: |
           echo "Archivo prueba, hola" >> test.log
       
