@@ -1,0 +1,15 @@
+name: Deploy to server
+
+on: push
+
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix: 
+        message: ["Hola", "CodigoFacilito", "Bootcamp Gihub Actions"]
+    
+    steps:
+      - name: Print mensaje
+        run: echo "${{ matrix.message }}"
