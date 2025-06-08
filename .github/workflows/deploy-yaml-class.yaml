@@ -10,6 +10,9 @@ jobs:
     name: First Job
     runs-on: ubuntu-latest
 
+    outputs:
+      salida: ${{ steps.step_1.outputs.my_variable }}
+
     steps:
       - name: Working dir
         id: step_1
@@ -29,7 +32,8 @@ jobs:
 
     env:
       NAME: CodigoFacilito
+      SALIDA: ${{ needs.first_job.outputs.salidad }}
 
     steps:
       - name: Hola Mundo 2
-        run: echo "Hola Mundo Segundo ${{ github.ref }} - $NAME"
+        run: echo "Hola Mundo Segundo ${{ github.ref }} - $NAME - $SALIDA"
