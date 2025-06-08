@@ -44,5 +44,13 @@ jobs:
       SALIDA: ${{ needs.first_job.outputs.salida }}
 
     steps:
+      - name: Descargar arterfacto
+        uses: actions/download-artifact@v4
+        with:
+          name: archivo-test
+        
+      - name: Cat file
+        run: cat test.log
+
       - name: Hola Mundo 2
         run: echo "Hola Mundo Segundo ${{ github.ref }} - $NAME - $SALIDA"
