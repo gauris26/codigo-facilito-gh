@@ -12,13 +12,10 @@ jobs:
 
     steps:
       - name: Working dir
-        run: ls -al
+        run: echo $GITHUB_OUTPUT
 
       - name: Action
         uses: actions/checkout@v4
-
-      - name: Working dir after action
-        run: ls -al
   
   second-job:
     if: ${{ github.ref == 'refs/heads/main' }}
