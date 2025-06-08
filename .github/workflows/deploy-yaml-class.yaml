@@ -23,7 +23,16 @@ jobs:
 
       - name: Action
         uses: actions/checkout@v4
-  
+
+      - name:
+        run: |
+          echo "Archivo prueba, hola" >> test.log
+      
+      - name: Subir arterfacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: archivo-test
+          path: test.log
   second_job:
     if: ${{ github.ref == 'refs/heads/main' }}
     needs: 
