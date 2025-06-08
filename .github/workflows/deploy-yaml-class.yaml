@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Working dir
+        run: ls -al
+
       - name: Action
         uses: actions/checkout@v4
 
