@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  first-job:
+  first_job:
     name: First Job
     runs-on: ubuntu-latest
 
@@ -24,10 +24,10 @@ jobs:
       - name: Action
         uses: actions/checkout@v4
   
-  second-job:
+  second_job:
     if: ${{ github.ref == 'refs/heads/main' }}
     needs: 
-      - first-job
+      - first_job
     runs-on: ubuntu-latest
 
     env:
