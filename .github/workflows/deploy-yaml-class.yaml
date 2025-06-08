@@ -24,4 +24,4 @@ jobs:
 
     steps:
       - name: Hola Mundo 2
-        run: echo "Hola Mundo Segundo ${{ github.ref }}" - $CodigoFacilito
+        run: echo "Hola Mundo Segundo ${{ github.ref }}" - $NAME
